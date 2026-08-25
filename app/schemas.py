@@ -249,3 +249,9 @@ class WaitlistOut(BaseModel):
     created_at: datetime
 
     model_config = {"from_attributes": True}
+
+
+class WaitlistOutWithConfirm(WaitlistOut):
+    confirmation_url: str | None = None
+
+    model_config = {"from_attributes": True}
