@@ -1,0 +1,956 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Reffery is an AI-powered referral marketplace connecting job candidates with employee referrers. Join the community where trusted referrals change careers — and every hire becomes a future referrer."><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://reffery.bywillo.ai/"><meta property="og:url" content="https://reffery.bywillo.ai/"><meta property="og:title" content="Reffery — Get Referred. Pay It Forward."><meta property="og:description" content="Reffery is an AI-powered referral marketplace connecting job candidates with employee referrers. Join the community where trusted referrals change careers — and every hire becomes a future referrer."><title>Reffery — Get Referred. Pay It Forward.</title><script async src="https://analytics.bywillo.ai/script.js" data-website-id="085a3fa7-a625-4007-aa67-ae5ce6659f54"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Reffery","description":"# Reffery — Complete Application Workflow\n\n*(Companion to the Product Overview & User Flow doc — this version is the source of truth for status naming; see that doc for detailed screen-level descriptions of each step.)*\n\n---\n\n## 1. User Visits Reffery\nVisit website/app → learn about Reffery → click Get Started.\n\n## 2. Sign Up\nLinkedIn, Google, or Email.\n\n## 3. Select Your Role\n- Looking for Referrals (Candidate)\n- I Can Refer People (Referrer)\n- Both — users can switch roles anytime.\n\n## 4. Complete Profile\n**Candidate:** resume, LinkedIn, experience, skills, education, certifications, portfolio/GitHub/Behance/LeetCode, work authorization, preferred locations.\n\n**Referrer:** verify company, connect company email (optional but recommended), verify employment.\n\n## 5. AI Profile Analysis\nAI analyzes resume, skills, experience, career progression, certifications, projects — and generates a profile summary, referral readiness score, and resume suggestions.\n\n## 6. Candidate Requests Endorsements *(optional)*\nFrom manager, professor, team lead, or senior colleague.\n\n## 7. Referrer Creates Referral\nAdds company, job link, job ID, job description, referral deadline, number of slots.\n\n## 8. AI Parses Job Description\nExtracts role, experience, required/preferred skills, education, certifications, visa sponsorship, location. Referrer reviews and edits before publishing.\n\n## 9. Referral Published\nDiscoverable via search, filters, or AI recommendations.\n\n## 10. Candidate Finds Referral\nVia search (company, role, technology, location, remote, visa sponsorship, experience level) or AI auto-recommendation.\n\n## 11. Candidate Opens Referral\nViews company, job description, referrer, required skills, deadline, slots, and an AI match explanation.\n\n## 12. Candidate Requests Referral\nSelects resume version, portfolio, cover message → clicks Request Referral.\n\n## 13. AI Evaluates Candidate\nCompares candidate profile vs. job requirements → generates match explanation, strengths, missing skills, recommendation.\n\n## 14. Referrer Reviews Requests\nDashboard shows AI summary, resume, LinkedIn, portfolio, endorsements. Referrer accepts or declines.\n\n## 15. Referral Accepted\nCandidate is notified. Status → **Accepted**.\n\n## 16. Referral Submitted\nReferrer submits the candidate through the company's internal referral process. Status → **Submitted**.\n\n## 17. Referral Tracking\n\n**Canonical status list:**\nRequested → Accepted → Submitted → Application Received → Recruiter Reviewing → Interview Scheduled → Interview Completed → Offer Received → Offer Accepted → Joined\n\nTerminal/exit states, reachable from any point: **Rejected**, **Withdrawn**.\n\n## 18. Notifications\nReferral accepted/declined, status updates, interview, offer, new endorsements, matching referrals.\n\n## 19. Reputation Updates\n**Candidate:** successful referrals, endorsements, profile completion, response rate.\n**Referrer:** referral completion rate, successful hires, response time, verification badge.\n\n## 20. AI Learning\nAfter every completed referral, the AI learns from successful referrals, interview outcomes, and hiring trends — continuously improving future match recommendations.\n\n*This is a concrete mechanism behind the moat argument in the Founder FAQ (Q12): match quality compounds with real usage data, not just network size.*\n\n## 21. Candidate Gets Hired 🎉\nCandidate marks **Hired**; availability automatically changes to **Not Looking**.\n\n## 22. Candidate Becomes Future Referrer\nWhen ready, they click **Become a Referrer** — the cycle restarts, reinforcing the self-sustaining loop described in the Founder FAQ (Q22).\n\n---\n\n## Complete Ecosystem Flow (Summary Diagram)\n\n```\nUser Visits Reffery\n        │\n        ▼\n      Sign Up\n        │\n        ▼\n   Choose Role (Candidate / Referrer / Both)\n        │\n        ▼\n   Complete Profile\n        │\n        ▼\n   AI Profile Analysis\n        │\n        ▼\nCandidate Requests Endorsements\n        │\n        ▼\n  Referrer Creates Referral\n        │\n        ▼\n  AI Parses Job Description\n        │\n        ▼\n    Referral Published\n        │\n        ▼\n   Candidate Finds Referral\n        │\n        ▼\n   AI Match Evaluation\n        │\n        ▼\n  Candidate Requests Referral\n        │\n        ▼\n  Referrer Reviews Request\n        │\n   ┌────┴────┐\n   ▼         ▼\n Accept   Decline\n   │\n   ▼\nSubmit Referral\n   │\n   ▼\nTrack Hiring Process\n   │\n   ▼\n Interview\n   │\n   ▼\n   Offer\n   │\n   ▼\nJoined Company\n   │\n   ▼\nCandidate Marks \"Hired\"\n   │\n   ▼\nLater Becomes a Referrer\n   │\n   ▼\nRepeats the Cycle\n```\n\nThis workflow captures the end-to-end journey of the platform while keeping the focus on Reffery's core purpose: enabling trusted employee referrals with AI-assisted decision support.","url":"https://reffery.bywillo.ai/"}</script> <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Reffery?","acceptedAnswer":{"@type":"Answer","text":"Reffery is an AI-powered referral marketplace that connects job candidates with employee referrers. It's built around a pay-it-forward philosophy: get a referral, land the job, then refer others in return."}},{"@type":"Question","name":"Who can join Reffery?","acceptedAnswer":{"@type":"Answer","text":"Anyone can join — as a candidate seeking a referral, as an employee willing to refer great candidates at their company, or as both. Many Reffery members are both candidates and referrers at different points in their careers."}},{"@type":"Question","name":"How does the AI matching work?","acceptedAnswer":{"@type":"Answer","text":"Reffery's AI analyzes your profile (resume, skills, experience), parses job descriptions to extract requirements, and evaluates candidate-to-job fit. This builds trust on both sides — referrers only see quality candidates, candidates only see roles they can genuinely land."}},{"@type":"Question","name":"When is Reffery launching?","acceptedAnswer":{"@type":"Answer","text":"Reffery is launching in closed beta soon. Join the waitlist now to get early access, provide input on features, and earn founding member status when we launch."}},{"@type":"Question","name":"Is Reffery free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, Reffery is free to join for early waitlist members. We'll announce our full pricing model closer to public launch."}}]}</script> <link rel="stylesheet" href="/_astro/_id_.CHCjkdrw.css">
+<link rel="stylesheet" href="/_astro/index.CLPuS57i.css"></head> <body class="min-h-screen flex flex-col bg-background text-foreground font-body antialiased"> <header class="site-header" data-astro-cid-3ef6ksr2> <nav class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 h-16 flex items-center justify-between" data-astro-cid-3ef6ksr2> <!-- Wordmark --> <a href="/" class="header-logo font-display" aria-label="Reffery home" data-astro-cid-3ef6ksr2>
+Reffery
+</a> <!-- Nav links --> <div class="header-nav" data-astro-cid-3ef6ksr2> <a href="#join-cta" class="header-cta font-body font-semibold" data-astro-cid-3ef6ksr2>
+Join Waitlist
+</a> </div> </nav> </header>  <main class="flex-1">   <section class="hero-section relative overflow-hidden" data-astro-cid-anhloy43> <!-- Noise texture overlay --> <div class="hero-noise" aria-hidden="true" data-astro-cid-anhloy43></div> <!-- Subtle gradient depth layers --> <div class="hero-glow" aria-hidden="true" data-astro-cid-anhloy43></div> <div class="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-24 pb-28 md:pt-32 md:pb-36" data-astro-cid-anhloy43> <!-- Top label — left-aligned, no badge/pill over H1 --> <p class="hero-label font-body font-600 text-sm tracking-widest uppercase mb-10" data-astro-cid-anhloy43>
+Reffery &mdash; Referral Marketplace
+</p> <!-- Headline: purely typographic, editorial, left-aligned --> <h1 class="hero-headline font-display leading-none tracking-tight mb-8 animate-slide-up" data-astro-cid-anhloy43>
+The referral<br data-astro-cid-anhloy43>
+you needed.<br data-astro-cid-anhloy43> <em class="hero-headline-em" data-astro-cid-anhloy43>Now pass it on.</em> </h1> <!-- Sub-headline --> <p class="hero-sub font-body mb-12 animate-slide-up delay-100" data-astro-cid-anhloy43>
+Join the community where trusted employee referrals connect great candidates
+      with people willing to put their name on the line.
+</p> <!-- Waitlist Form --> <div class="hero-form-wrap animate-slide-up delay-200" data-astro-cid-anhloy43> <form id="hero-waitlist-form" class="hero-form" action="#" method="post" aria-label="Join the Reffery waitlist" data-astro-cid-anhloy43> <!-- Role selector — surfaces the dual model immediately --> <div class="form-group" data-astro-cid-anhloy43> <label class="form-label font-body" data-astro-cid-anhloy43>I am joining as</label> <div class="role-selector" role="group" aria-label="Select your role" data-astro-cid-anhloy43> <label class="role-pill" data-astro-cid-anhloy43> <input type="radio" name="role" value="candidate" class="sr-only" data-astro-cid-anhloy43> <span data-astro-cid-anhloy43>Candidate</span> </label> <label class="role-pill" data-astro-cid-anhloy43> <input type="radio" name="role" value="referrer" class="sr-only" data-astro-cid-anhloy43> <span data-astro-cid-anhloy43>Referrer</span> </label> <label class="role-pill" data-astro-cid-anhloy43> <input type="radio" name="role" value="both" class="sr-only" checked data-astro-cid-anhloy43> <span data-astro-cid-anhloy43>Both</span> </label> </div> </div> <!-- Name + Email row --> <div class="form-row" data-astro-cid-anhloy43> <div class="form-group" data-astro-cid-anhloy43> <label for="hero-name" class="form-label font-body" data-astro-cid-anhloy43>Full name</label> <input id="hero-name" type="text" name="name" placeholder="Alex Rivera" autocomplete="name" required class="form-input font-body" data-astro-cid-anhloy43> </div> <div class="form-group" data-astro-cid-anhloy43> <label for="hero-email" class="form-label font-body" data-astro-cid-anhloy43>Work email</label> <input id="hero-email" type="email" name="email" placeholder="alex@company.com" autocomplete="email" required class="form-input font-body" data-astro-cid-anhloy43> </div> </div> <!-- Submit --> <button type="submit" class="form-cta font-body font-semibold" data-astro-cid-anhloy43>
+Join the Waitlist
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true" data-astro-cid-anhloy43> <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" data-astro-cid-anhloy43></path> </svg> </button> <p class="form-microcopy font-body" data-astro-cid-anhloy43>
+Free to join &mdash; no credit card. Open beta coming soon.
+</p> <p id="hero-form-msg" class="form-microcopy font-body" style="display:none;margin-top:0.5rem;" data-astro-cid-anhloy43></p> </form> </div> </div> </section>  <script>(function(){const apiBase = "https://api.willo.ai";
+const subscribeToken = "tk_4460b364c824d546e421700c7cbf504955afe1a92a31a84f";
+
+  // Role pill interactivity
+  const defaultPill = document.querySelector('.role-pill input[value="both"]');
+  if (defaultPill) defaultPill.checked = true;
+
+  // Waitlist form submission
+  const form = document.getElementById('hero-waitlist-form');
+  const msg = document.getElementById('hero-form-msg');
+  const btn = form ? form.querySelector('button[type="submit"]') : null;
+
+  if (form && msg) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get('name') || '').toString().trim();
+      const email = (data.get('email') || '').toString().trim();
+      const role = (data.get('role') || 'both').toString();
+
+      if (!name || !email) return;
+
+      if (btn) { btn.disabled = true; btn.textContent = 'Joining…'; }
+      msg.style.display = 'none';
+
+      try {
+        const payload = { email: email, name: name, source: 'waitlist-hero', role: role, token: subscribeToken };
+
+        const resp = await fetch((apiBase || '') + '/api/v1/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (resp.ok) {
+          msg.textContent = "🎉 You're on the list! We'll be in touch soon.";
+          msg.style.color = '#6EE7B7';
+          msg.style.display = 'block';
+          form.reset();
+          if (defaultPill) defaultPill.checked = true;
+          if (btn) { btn.disabled = false; btn.innerHTML = 'Join the Waitlist <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" /></svg>'; }
+        } else {
+          const body = await resp.json().catch(function() { return {}; });
+          msg.textContent = (body && body.error) ? body.error : 'Something went wrong. Please try again.';
+          msg.style.color = '#FCA5A5';
+          msg.style.display = 'block';
+          if (btn) { btn.disabled = false; btn.textContent = 'Join the Waitlist'; }
+        }
+      } catch (err) {
+        msg.textContent = 'Network error — please try again.';
+        msg.style.color = '#FCA5A5';
+        msg.style.display = 'block';
+        if (btn) { btn.disabled = false; btn.textContent = 'Join the Waitlist'; }
+      }
+    });
+  }
+})();</script> <section class="why-section" data-astro-cid-uydokgx4> <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24 md:py-32" data-astro-cid-uydokgx4> <!-- Section opener — big type as structure --> <div class="why-layout" data-astro-cid-uydokgx4> <!-- Left column: large editorial statement --> <div class="why-left" data-astro-cid-uydokgx4> <p class="why-overline font-body" data-astro-cid-uydokgx4>Why Reffery works</p> <h2 class="why-headline font-display" data-astro-cid-uydokgx4>
+Referrals change careers.<br data-astro-cid-uydokgx4> <em class="why-headline-em" data-astro-cid-uydokgx4>Communities sustain them.</em> </h2> </div> <!-- Right column: three explanatory points, no icon cards --> <div class="why-right" data-astro-cid-uydokgx4> <div class="why-point" data-astro-cid-uydokgx4> <div class="why-point-marker font-display" aria-hidden="true" data-astro-cid-uydokgx4>01</div> <div class="why-point-content" data-astro-cid-uydokgx4> <h3 class="why-point-title font-body" data-astro-cid-uydokgx4>Skip the black hole</h3> <p class="why-point-text font-body" data-astro-cid-uydokgx4>
+Cold applications have a 2% callback rate. A referred candidate is
+              4&times; more likely to get hired. Reffery connects you directly
+              with employees who can vouch for you inside their company.
+</p> </div> </div> <div class="why-point" data-astro-cid-uydokgx4> <div class="why-point-marker font-display" aria-hidden="true" data-astro-cid-uydokgx4>02</div> <div class="why-point-content" data-astro-cid-uydokgx4> <h3 class="why-point-title font-body" data-astro-cid-uydokgx4>AI that builds trust</h3> <p class="why-point-text font-body" data-astro-cid-uydokgx4>
+Our AI analyzes your profile, parses job requirements, and evaluates
+              fit before a referral is ever requested. Referrers only see quality
+              candidates. Candidates only see roles they can genuinely land.
+</p> </div> </div> <div class="why-point" data-astro-cid-uydokgx4> <div class="why-point-marker font-display" aria-hidden="true" data-astro-cid-uydokgx4>03</div> <div class="why-point-content" data-astro-cid-uydokgx4> <h3 class="why-point-title font-body" data-astro-cid-uydokgx4>The cycle sustains itself</h3> <p class="why-point-text font-body" data-astro-cid-uydokgx4>
+When you land a job through Reffery, you become a referrer. Not
+              because we ask nicely &mdash; because you remember what it felt like
+              before someone put their name on the line for you.
+</p> </div> </div> </div> </div> <!-- Divider accent --> <div class="why-divider" aria-hidden="true" data-astro-cid-uydokgx4></div> <!-- Bottom pull-text --> <p class="why-bottom font-display" data-astro-cid-uydokgx4>
+Built for candidates. Built for referrers. Built to be <em data-astro-cid-uydokgx4>both</em>.
+</p> </div> </section>  <section class="stats-section" data-astro-cid-fpqmvzvu> <div class="stats-noise" aria-hidden="true" data-astro-cid-fpqmvzvu></div> <div class="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24 md:py-28" data-astro-cid-fpqmvzvu> <p class="stats-overline font-body" data-astro-cid-fpqmvzvu>The case for referrals</p> <div class="stats-grid" data-astro-cid-fpqmvzvu> <div class="stat-item animate-slide-up" data-astro-cid-fpqmvzvu> <div class="stat-number font-display" data-astro-cid-fpqmvzvu>4&times;</div> <div class="stat-label font-body" data-astro-cid-fpqmvzvu>more likely to be hired<br data-astro-cid-fpqmvzvu>as a referred candidate</div> </div> <div class="stat-divider" aria-hidden="true" data-astro-cid-fpqmvzvu></div> <div class="stat-item animate-slide-up delay-100" data-astro-cid-fpqmvzvu> <div class="stat-number font-display" data-astro-cid-fpqmvzvu>70<span class="stat-unit" data-astro-cid-fpqmvzvu>%</span></div> <div class="stat-label font-body" data-astro-cid-fpqmvzvu>of jobs are filled through<br data-astro-cid-fpqmvzvu>personal networks</div> </div> <div class="stat-divider" aria-hidden="true" data-astro-cid-fpqmvzvu></div> <div class="stat-item animate-slide-up delay-200" data-astro-cid-fpqmvzvu> <div class="stat-number font-display" data-astro-cid-fpqmvzvu>2<span class="stat-unit" data-astro-cid-fpqmvzvu>%</span></div> <div class="stat-label font-body" data-astro-cid-fpqmvzvu>average callback rate<br data-astro-cid-fpqmvzvu>for cold applications</div> </div> <div class="stat-divider" aria-hidden="true" data-astro-cid-fpqmvzvu></div> <div class="stat-item animate-slide-up delay-300" data-astro-cid-fpqmvzvu> <div class="stat-number font-display" data-astro-cid-fpqmvzvu>45<span class="stat-unit" data-astro-cid-fpqmvzvu>%</span></div> <div class="stat-label font-body" data-astro-cid-fpqmvzvu>of referral hires stay<br data-astro-cid-fpqmvzvu>longer than 4 years</div> </div> </div> <!-- Edgy bottom statement --> <p class="stats-statement font-display" data-astro-cid-fpqmvzvu>
+The system isn't broken for everyone.<br data-astro-cid-fpqmvzvu> <em data-astro-cid-fpqmvzvu>It was never built for you.</em> </p> </div> </section>  <section class="quote-section" data-astro-cid-zz4qmcfd> <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24 md:py-32" data-astro-cid-zz4qmcfd> <div class="quote-layout" data-astro-cid-zz4qmcfd> <!-- Left: small label vertical text --> <div class="quote-side" aria-hidden="true" data-astro-cid-zz4qmcfd> <div class="quote-label-vert font-body" data-astro-cid-zz4qmcfd>Community voice</div> <div class="quote-line" data-astro-cid-zz4qmcfd></div> </div> <!-- Right: the quote + attribution --> <blockquote class="quote-body" data-astro-cid-zz4qmcfd> <p class="quote-text font-display animate-slide-up" data-astro-cid-zz4qmcfd>
+&ldquo;I got my first job at Google through a referral from someone I had
+          never met. When they told me they&rsquo;d been helped the same way three
+          years earlier, I understood what Reffery is trying to build.&rdquo;
+</p> <footer class="quote-attribution animate-slide-up delay-100" data-astro-cid-zz4qmcfd> <div class="quote-attr-name font-body" data-astro-cid-zz4qmcfd>Maya Okonkwo</div> <div class="quote-attr-role font-body" data-astro-cid-zz4qmcfd>Software Engineer &mdash; referred via Reffery Beta</div> </footer> </blockquote> </div> <!-- Pay-it-forward CTA strip --> <div class="quote-cta-strip animate-slide-up delay-200" data-astro-cid-zz4qmcfd> <p class="quote-cta-text font-body" data-astro-cid-zz4qmcfd>
+Ready to be part of the cycle?
+</p> <a href="#join-cta" class="quote-cta-btn font-body font-semibold" data-astro-cid-zz4qmcfd>
+Join the waitlist
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true" data-astro-cid-zz4qmcfd> <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" data-astro-cid-zz4qmcfd></path> </svg> </a> </div> </div> </section>  <section class="join-section" id="join-cta" data-astro-cid-e2brnx6y> <div class="join-noise" aria-hidden="true" data-astro-cid-e2brnx6y></div> <div class="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24 md:py-32" data-astro-cid-e2brnx6y> <div class="join-layout" data-astro-cid-e2brnx6y> <!-- Left: editorial headline --> <div class="join-left" data-astro-cid-e2brnx6y> <h2 class="join-headline font-display animate-slide-up" data-astro-cid-e2brnx6y>
+Be first.<br data-astro-cid-e2brnx6y> <em class="join-headline-em" data-astro-cid-e2brnx6y>Be the one who pays it forward.</em> </h2> <p class="join-sub font-body animate-slide-up delay-100" data-astro-cid-e2brnx6y>
+Reffery is launching soon in closed beta. Join the waitlist and be among
+          the first to access the referral community built around reciprocity.
+</p> <!-- Trust signals --> <ul class="join-trust-list animate-slide-up delay-200" aria-label="Waitlist benefits" data-astro-cid-e2brnx6y> <li class="join-trust-item font-body" data-astro-cid-e2brnx6y> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true" class="join-trust-icon" data-astro-cid-e2brnx6y> <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" data-astro-cid-e2brnx6y></path> </svg>
+Early access to AI-powered matching
+</li> <li class="join-trust-item font-body" data-astro-cid-e2brnx6y> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true" class="join-trust-icon" data-astro-cid-e2brnx6y> <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" data-astro-cid-e2brnx6y></path> </svg>
+Input on features before we ship
+</li> <li class="join-trust-item font-body" data-astro-cid-e2brnx6y> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true" class="join-trust-icon" data-astro-cid-e2brnx6y> <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" data-astro-cid-e2brnx6y></path> </svg>
+Founding member status when we launch
+</li> </ul> </div> <!-- Right: compact repeat form --> <div class="join-right animate-slide-up delay-100" data-astro-cid-e2brnx6y> <form id="cta-waitlist-form" class="join-form" action="#" method="post" aria-label="Join the Reffery waitlist" data-astro-cid-e2brnx6y> <div class="join-form-header font-body" data-astro-cid-e2brnx6y>Secure your spot</div> <div class="join-role-selector" role="group" aria-label="Select your role" data-astro-cid-e2brnx6y> <label class="join-role-pill" data-astro-cid-e2brnx6y> <input type="radio" name="role-cta" value="candidate" class="sr-only" data-astro-cid-e2brnx6y> <span data-astro-cid-e2brnx6y>Candidate</span> </label> <label class="join-role-pill" data-astro-cid-e2brnx6y> <input type="radio" name="role-cta" value="referrer" class="sr-only" data-astro-cid-e2brnx6y> <span data-astro-cid-e2brnx6y>Referrer</span> </label> <label class="join-role-pill" data-astro-cid-e2brnx6y> <input type="radio" name="role-cta" value="both" class="sr-only" checked data-astro-cid-e2brnx6y> <span data-astro-cid-e2brnx6y>Both</span> </label> </div> <input type="text" name="name-cta" placeholder="Full name" autocomplete="name" required class="join-input font-body" aria-label="Full name" data-astro-cid-e2brnx6y> <input type="email" name="email-cta" placeholder="Work email" autocomplete="email" required class="join-input font-body" aria-label="Work email" data-astro-cid-e2brnx6y> <button type="submit" class="join-cta-btn font-body font-semibold" data-astro-cid-e2brnx6y>
+Join the Waitlist
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true" data-astro-cid-e2brnx6y> <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" data-astro-cid-e2brnx6y></path> </svg> </button> <p class="join-microcopy font-body" data-astro-cid-e2brnx6y>Free forever for early members.</p> <p id="cta-form-msg" class="join-microcopy font-body" style="display:none;margin-top:0.25rem;" data-astro-cid-e2brnx6y></p> </form> </div> </div> </div> </section>  <script>(function(){const apiBase = "https://api.willo.ai";
+const subscribeToken = "tk_4460b364c824d546e421700c7cbf504955afe1a92a31a84f";
+
+  // Default role pill
+  const defaultJoinPill = document.querySelector('.join-role-pill input[value="both"]');
+  if (defaultJoinPill) defaultJoinPill.checked = true;
+
+  // CTA form submission
+  const ctaForm = document.getElementById('cta-waitlist-form');
+  const ctaMsg = document.getElementById('cta-form-msg');
+  const ctaBtn = ctaForm ? ctaForm.querySelector('button[type="submit"]') : null;
+
+  if (ctaForm && ctaMsg) {
+    ctaForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(ctaForm);
+      const name = (data.get('name-cta') || '').toString().trim();
+      const email = (data.get('email-cta') || '').toString().trim();
+      const role = (data.get('role-cta') || 'both').toString();
+
+      if (!name || !email) return;
+
+      if (ctaBtn) { ctaBtn.disabled = true; ctaBtn.textContent = 'Joining…'; }
+      ctaMsg.style.display = 'none';
+
+      try {
+        const payload = { email: email, name: name, source: 'waitlist-cta', role: role, token: subscribeToken };
+
+        const resp = await fetch((apiBase || '') + '/api/v1/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (resp.ok) {
+          ctaMsg.textContent = "🎉 You're on the list! We'll be in touch soon.";
+          ctaMsg.style.color = '#6EE7B7';
+          ctaMsg.style.display = 'block';
+          ctaForm.reset();
+          if (defaultJoinPill) defaultJoinPill.checked = true;
+          if (ctaBtn) { ctaBtn.disabled = false; ctaBtn.innerHTML = 'Join the Waitlist <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" /></svg>'; }
+        } else {
+          const body = await resp.json().catch(function() { return {}; });
+          ctaMsg.textContent = (body && body.error) ? body.error : 'Something went wrong. Please try again.';
+          ctaMsg.style.color = '#FCA5A5';
+          ctaMsg.style.display = 'block';
+          if (ctaBtn) { ctaBtn.disabled = false; ctaBtn.textContent = 'Join the Waitlist'; }
+        }
+      } catch (err) {
+        ctaMsg.textContent = 'Network error — please try again.';
+        ctaMsg.style.color = '#FCA5A5';
+        ctaMsg.style.display = 'block';
+        if (ctaBtn) { ctaBtn.disabled = false; ctaBtn.textContent = 'Join the Waitlist'; }
+      }
+    });
+  }
+})();</script>  </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-10" data-astro-cid-sz7xmlte> <div class="footer-inner" data-astro-cid-sz7xmlte> <!-- Brand --> <div class="footer-brand" data-astro-cid-sz7xmlte> <p class="footer-logo font-display" data-astro-cid-sz7xmlte>Reffery</p> <p class="footer-tagline font-body" data-astro-cid-sz7xmlte>Get referred. Pay it forward.</p> </div> <!-- Links --> <div class="footer-links" data-astro-cid-sz7xmlte> <a href="mailto:hello@reffery.com" class="footer-link font-body" data-astro-cid-sz7xmlte>hello@reffery.com</a> <span class="footer-sep" aria-hidden="true" data-astro-cid-sz7xmlte>&middot;</span> <a href="/blog" class="footer-link font-body" data-astro-cid-sz7xmlte>Blog</a> </div> <!-- Copyright --> <p class="footer-copy font-body" data-astro-cid-sz7xmlte>&copy; 2026 Reffery. All rights reserved.</p> </div> </div> </footer>  <aside id="willo-cart-root" class="hidden"> <button type="button" id="willo-cart-trigger" aria-label="Open cart" class="fixed top-4 right-4 z-40 inline-flex items-center gap-2 rounded-full bg-foreground text-background pl-3 pr-2 py-2 text-sm font-medium shadow-lg hover:shadow-xl hover:bg-foreground/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 transition-all"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="9" cy="21" r="1"></circle> <circle cx="20" cy="21" r="1"></circle> <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path> </svg> <span class="sr-only sm:not-sr-only">Cart</span> <span id="willo-cart-count" class="min-w-[1.25rem] h-5 inline-flex items-center justify-center rounded-full bg-background/20 px-1.5 text-[11px] font-semibold tabular-nums">0</span> </button> <div id="willo-cart-backdrop" class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div> <div id="willo-cart-panel" role="dialog" aria-modal="true" aria-labelledby="willo-cart-title" class="fixed top-0 right-0 z-50 h-full w-full sm:w-[28rem] max-w-full bg-background border-l shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col"> <header class="flex items-center justify-between px-5 py-4 border-b"> <h2 id="willo-cart-title" class="text-base font-semibold flex items-baseline gap-2">
+Cart
+<span id="willo-cart-panel-count" class="text-sm text-muted-foreground font-normal tabular-nums">(0)</span> </h2> <button type="button" id="willo-cart-close" aria-label="Close cart" class="rounded-md p-1.5 text-foreground/70 hover:bg-muted hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground transition-colors"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line> </svg> </button> </header> <div id="willo-cart-recovered" class="hidden mx-5 mt-3 rounded-lg border border-amber-500/30 bg-amber-500/5 p-3 text-xs text-amber-700 dark:text-amber-400 flex items-start gap-2"> <svg class="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M21 12a9 9 0 1 1-6.219-8.56"></path> <polyline points="21 4 21 10 15 10"></polyline> </svg> <span>We restored your cart after a break. Any discount codes will need to be re-entered at checkout.</span> </div> <div id="willo-cart-error" class="hidden mx-5 mt-3 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-xs text-destructive flex items-start gap-2"> <svg class="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="10"></circle> <line x1="12" y1="8" x2="12" y2="12"></line> <line x1="12" y1="16" x2="12.01" y2="16"></line> </svg> <span></span> </div> <div id="willo-cart-lines" class="flex-1 overflow-y-auto px-5 py-5 space-y-5"> <div id="willo-cart-empty" class="text-center py-12"> <div class="mx-auto w-12 h-12 rounded-full bg-muted flex items-center justify-center text-muted-foreground mb-3"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="9" cy="21" r="1"></circle> <circle cx="20" cy="21" r="1"></circle> <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path> </svg> </div> <p class="text-sm font-medium">Your cart is empty</p> <p class="text-xs text-muted-foreground mt-1.5 max-w-[16rem] mx-auto">
+Start browsing and add items to see them here.
+</p> <a href="/products" class="mt-4 inline-flex items-center gap-1.5 text-xs font-medium underline underline-offset-4 hover:text-foreground/80 focus:outline-none focus-visible:text-foreground">
+Browse the catalog
+<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <line x1="5" y1="12" x2="19" y2="12"></line> <polyline points="12 5 19 12 12 19"></polyline> </svg> </a> </div> </div> <footer id="willo-cart-footer" class="hidden border-t px-5 py-4 space-y-3 bg-background"> <div class="flex items-center justify-between text-sm"> <span class="text-muted-foreground">Subtotal</span> <span id="willo-cart-subtotal" class="font-semibold tabular-nums">—</span> </div> <p class="text-[11px] text-muted-foreground">
+Shipping and taxes calculated at checkout.
+</p> <button type="button" id="willo-cart-checkout" class="w-full rounded-md bg-foreground text-background px-4 py-3 text-sm font-semibold hover:bg-foreground/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+Checkout
+</button> <div class="flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground"> <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect> <path d="M7 11V7a5 5 0 0 1 10 0v4"></path> </svg> <span>Secure Shopify checkout</span> </div> </footer> </div> </aside> <script type="module">(function(){const t=["willo-cart-root","willo-cart-trigger","willo-cart-backdrop","willo-cart-panel"];for(const r of t){const l=document.querySelectorAll("#"+r);for(let o=1;o<l.length;o++)l[o].remove()}})();</script> <!-- WILLO-BRIDGE:BEGIN v=10 (auto-managed by Willo — do not edit by hand; refreshed on each deploy) --> <!-- Willo visual-edit bridge (PLAN-website-preview.md Phase 2a) -- dormant until an allowlisted Willo dashboard enables it; inert for normal visitors. --> <script>
+(function () {
+  "use strict";
+  var ALLOWED = ["https://www.willo.ai"];
+  var PROTO = 1;
+  var editing = false;
+  var trustedOrigin = null;
+  var outlined = null;
+  var selected = null;
+  // Inline text editing (v4). inlineEl is the element currently contentEditable;
+  // inlineOrig is its textContent captured at edit-start (for restore-on-cancel).
+  var inlineEl = null;
+  var inlineOrig = null;
+  var inlineRaf = 0;
+  // Bulk text editing (v7). When on, EVERY text-leaf element is contentEditable
+  // at once. bulkOn gates it; bulkEls is the live list of editable leaves, each
+  // paired with its original text + a stable selector captured at enable-time so
+  // the dirty report is stable even as text changes. bulkRaf coalesces the
+  // dirty-report burst; bulkSaved holds selectors cleared by a partial Save.
+  var bulkOn = false;
+  var bulkEls = [];       // [{ el, selector, tag, orig, title0 }]
+  var bulkRaf = 0;
+  var bulkSaved = {};     // selector -> true: landed via a Save; paints green while its text still equals the rebased baseline
+  // selector -> { reason, text }: elements a Save couldn't land. The box paints
+  // red + shows the reason on hover while its text stays exactly what failed;
+  // the annotation clears itself once the user re-edits (text != failed text).
+  var bulkFailed = {};
+  // Box outline per state so edited/saved/failed leaves are all distinguishable.
+  var BULK_OUTLINE = {
+    neutral: "1px dashed rgba(99,102,241,0.5)",  // editable, unedited (indigo)
+    dirty: "2px solid rgba(245,158,11,0.95)",     // edited, pending save (amber)
+    saved: "2px solid rgba(34,197,94,0.7)",       // saved (green)
+    failed: "2px solid rgba(239,68,68,0.95)"      // couldn't be saved (red)
+  };
+
+  function cssEscape(s) {
+    if (window.CSS && CSS.escape) return CSS.escape(s);
+    return String(s).replace(/[^a-zA-Z0-9_-]/g, "_");
+  }
+  function selectorFor(el) {
+    if (!el || el.nodeType !== 1) return "";
+    var parts = [];
+    var node = el;
+    while (node && node.nodeType === 1 && node.tagName.toLowerCase() !== "html") {
+      if (node.id) { parts.unshift("#" + cssEscape(node.id)); break; }
+      var tag = node.tagName.toLowerCase();
+      var idx = 1, sib = node;
+      while ((sib = sib.previousElementSibling)) {
+        if (sib.tagName === node.tagName) idx++;
+      }
+      parts.unshift(tag + ":nth-of-type(" + idx + ")");
+      node = node.parentElement;
+      if (parts.length > 8) break;
+    }
+    return parts.join(" > ");
+  }
+  function nearbyHeadings(el) {
+    var out = [];
+    var sec = el.closest ? el.closest("section, header, footer, main, article") : null;
+    if (sec) {
+      var h = sec.querySelector("h1,h2,h3,h4,h5,h6");
+      if (h && h.innerText) out.push(h.innerText.trim().slice(0, 80));
+    }
+    if (document.title) out.push(String(document.title).slice(0, 80));
+    return out;
+  }
+  function describe(el) {
+    var tag = el.tagName ? el.tagName.toLowerCase() : "element";
+    var raw = (el.innerText || (el.getAttribute && el.getAttribute("alt")) || "");
+    var text = String(raw).trim().replace(/\s+/g, " ").slice(0, 200);
+    var label = tag + (text ? ' "' + text.slice(0, 40) + '"' : "");
+    var src = astroSourceOf(el);
+    return {
+      context: {
+        page: location.pathname || "/",
+        selector: selectorFor(el),
+        text: text,
+        tag: tag,
+        headings: nearbyHeadings(el),
+        sourceFile: src.file,
+        sourceLoc: src.loc,
+        surrounding: surroundingContext(el)
+      },
+      label: label
+    };
+  }
+
+  // v4: an element qualifies for direct inline text editing iff it is a text
+  // leaf — non-empty trimmed text, no element children except <br>, textContent
+  // no longer than 5000 chars, and not inside script/style/svg. Decided
+  // structurally (not by a tag allowlist) so h1-h6/p/span/a/button/li/label/td/…
+  // all qualify while wrappers with child elements do not.
+  function isTextLeaf(el) {
+    if (!el || el.nodeType !== 1) return false;
+    if (el.closest && el.closest("script, style, svg")) return false;
+    var tc = el.textContent || "";
+    if (tc.length > 5000) return false;
+    if (!tc.replace(/\s+/g, " ").trim()) return false;
+    var kids = el.children;
+    for (var i = 0; i < kids.length; i++) {
+      var kt = kids[i].tagName ? kids[i].tagName.toLowerCase() : "";
+      if (kt !== "br") return false;
+    }
+    return true;
+  }
+  // Raw textContent (NOT whitespace-collapsed), capped at 5000 chars. The cap
+  // matches the editable threshold; the raw form is what the editor and the
+  // server-side source match need.
+  function fullTextOf(el) {
+    return String((el && el.textContent) || "").slice(0, 5000);
+  }
+  // v9: Astro's dev server stamps data-astro-source-file (absolute path to the
+  // authored .astro/.md file) + data-astro-source-loc ("line:col", 1-based) on
+  // every rendered element in dev mode ONLY. Walk to the nearest ancestor that
+  // carries them so a text leaf without its own attrs still resolves to its
+  // source. Returns nulls on a static build / live site (no attrs) — the server
+  // then falls back to string matching.
+  function astroSourceOf(el) {
+    var node = el;
+    while (node && node.nodeType === 1) {
+      if (node.getAttribute) {
+        var f = node.getAttribute("data-astro-source-file");
+        if (f) return { file: f, loc: node.getAttribute("data-astro-source-loc") || null };
+      }
+      node = node.parentElement;
+    }
+    return { file: null, loc: null };
+  }
+
+  // v10: capture a small window of the RENDERED text on either side of a node.
+  // When the same text occurs many times, the server can't safely guess WHICH
+  // one the user meant — but the surrounding words disambiguate honestly (the
+  // text itself stays the only matcher; this only picks among identical hits).
+  // We walk outward from the node collecting sibling text, climbing to the
+  // parent when a level runs out, and cap each side so the payload stays tiny.
+  function ctxSide(el, forward) {
+    var acc = [];
+    var len = 0;
+    var node = el;
+    var hops = 0;
+    while (node && len < 140 && hops < 60) {
+      var sib = forward ? node.nextSibling : node.previousSibling;
+      if (sib) {
+        var t = String(sib.textContent || "").replace(/\s+/g, " ");
+        if (t.replace(/\s/g, "")) {
+          if (forward) acc.push(t); else acc.unshift(t);
+          len += t.length;
+        }
+        node = sib;
+      } else {
+        node = node.parentElement;  // climb one level, keep scanning siblings
+      }
+      hops++;
+    }
+    var s = acc.join(" ").replace(/\s+/g, " ").trim();
+    return forward ? s.slice(0, 80) : s.slice(-80);
+  }
+  function surroundingContext(el) {
+    return { before: ctxSide(el, false), after: ctxSide(el, true) };
+  }
+
+  function clearOutline() {
+    if (outlined) {
+      outlined.style.outline = outlined.getAttribute("data-willo-o") || "";
+      outlined.removeAttribute("data-willo-o");
+      outlined = null;
+    }
+  }
+  function setOutline(el) {
+    if (el === outlined || !el || !el.style) return;
+    clearOutline();
+    el.setAttribute("data-willo-o", el.style.outline || "");
+    el.style.outline = "2px solid #6366f1";
+    el.style.outlineOffset = "1px";
+    outlined = el;
+  }
+
+  // The SELECTED element keeps a persistent highlight that lives inside the
+  // iframe (on the element itself), so it scrolls naturally with the page and
+  // always marks exactly what the user picked. Distinct from the transient
+  // hover outline above. Cleared via a willo:clear-selection message.
+  function clearSelected() {
+    if (selected) {
+      selected.style.outline = selected.getAttribute("data-willo-so") || "";
+      selected.style.outlineOffset = selected.getAttribute("data-willo-soo") || "";
+      selected.style.boxShadow = selected.getAttribute("data-willo-sbs") || "";
+      selected.removeAttribute("data-willo-so");
+      selected.removeAttribute("data-willo-soo");
+      selected.removeAttribute("data-willo-sbs");
+      selected = null;
+    }
+  }
+  function applySelected(el) {
+    if (!el || !el.style) return;
+    clearSelected();
+    el.setAttribute("data-willo-so", el.style.outline || "");
+    el.setAttribute("data-willo-soo", el.style.outlineOffset || "");
+    el.setAttribute("data-willo-sbs", el.style.boxShadow || "");
+    el.style.outline = "2px solid #6366f1";
+    el.style.outlineOffset = "2px";
+    el.style.boxShadow = "0 0 0 4px rgba(99,102,241,0.18)";
+    selected = el;
+  }
+
+  function inInlineEdit(node) {
+    return !!(inlineEl && node && (node === inlineEl || (inlineEl.contains && inlineEl.contains(node))));
+  }
+  function onMove(e) {
+    if (!editing) return;
+    // Don't draw the hover/crosshair outline over the element being edited —
+    // the user is working inside it, not picking a new target.
+    if (inInlineEdit(e.target)) return;
+    setOutline(e.target);
+  }
+  function rectOf(el) {
+    var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+    if (!r) return null;
+    return {
+      top: Math.round(r.top), left: Math.round(r.left),
+      bottom: Math.round(r.bottom), right: Math.round(r.right),
+      width: Math.round(r.width), height: Math.round(r.height)
+    };
+  }
+  function onClick(e) {
+    if (!editing) return;
+    // While inline-editing, a click inside the edited element must place the
+    // caret / select text — never re-trigger selection. We still preventDefault
+    // (so an editable <a> can't navigate away) but skip re-selecting/posting.
+    if (inInlineEdit(e.target)) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+    e.preventDefault();
+    e.stopPropagation();
+    var d = describe(e.target);
+    clearOutline();
+    applySelected(e.target);
+    if (trustedOrigin) {
+      // selfHighlight tells the dashboard this (newer) bridge drew the
+      // selection outline INSIDE the iframe (so it tracks scroll) and supports
+      // scroll-to-selected. Older bridges omit it, so the dashboard falls back
+      // to its own overlay and hides the scroll-to-element control.
+      // editable/fullText (v4) are additive: a v3 dashboard ignores them; a v4
+      // dashboard uses them to offer inline editing. fullText is present iff
+      // editable so the dashboard can key off `editable && fullText != null`.
+      var msg = { type: "willo:element-selected", v: PROTO, context: d.context, label: d.label, rect: rectOf(e.target), selfHighlight: true };
+      var canEdit = isTextLeaf(e.target);
+      msg.editable = canEdit;
+      if (canEdit) msg.fullText = fullTextOf(e.target);
+      try { window.parent.postMessage(msg, trustedOrigin); } catch (err) {}
+    }
+    return false;
+  }
+
+  function enable(origin) {
+    trustedOrigin = origin;
+    if (editing) return;
+    editing = true;
+    document.addEventListener("mousemove", onMove, true);
+    document.addEventListener("click", onClick, true);
+    if (document.body) document.body.style.cursor = "crosshair";
+  }
+  function disable() {
+    editing = false;
+    // Leave the DOM sane if edit mode is torn down mid-edit: restore original.
+    cancelInlineEdit();
+    clearOutline();
+    document.removeEventListener("mousemove", onMove, true);
+    document.removeEventListener("click", onClick, true);
+    if (document.body) document.body.style.cursor = "";
+  }
+
+  // --- Inline text editing (v4) --------------------------------------------
+  // Turn the SELECTED element into an in-place plaintext editor. We only ever
+  // read/write textContent, so nothing typed or pasted can inject DOM.
+  function postInlineInput() {
+    if (!inlineEl || !trustedOrigin) return;
+    var t = fullTextOf(inlineEl);
+    try { window.parent.postMessage({ type: "willo:inline-edit-input", v: PROTO, text: t }, trustedOrigin); } catch (err) {}
+  }
+  function onInlineInput() {
+    // Coalesce input bursts into one post per frame. The parent is local so
+    // this is polish, not a requirement.
+    if (inlineRaf) return;
+    if (window.requestAnimationFrame) {
+      inlineRaf = window.requestAnimationFrame(function () { inlineRaf = 0; postInlineInput(); });
+    } else {
+      postInlineInput();
+    }
+  }
+  function teardownInline() {
+    // Drop contentEditable + listeners; leaves the current DOM text in place.
+    if (!inlineEl) return;
+    var el = inlineEl;
+    try { el.removeEventListener("input", onInlineInput, false); } catch (err) {}
+    try { el.contentEditable = "false"; } catch (err) {}
+    try { el.removeAttribute("data-willo-editing"); } catch (err) {}
+    if (inlineRaf && window.cancelAnimationFrame) { try { window.cancelAnimationFrame(inlineRaf); } catch (err) {} }
+    inlineRaf = 0;
+    try { if (el.blur) el.blur(); } catch (err) {}
+  }
+  function startInlineEdit() {
+    if (inlineEl) return;
+    var el = selected;
+    if (!el || el.nodeType !== 1) return;
+    inlineEl = el;
+    inlineOrig = String(el.textContent || "");
+    // plaintext-only where supported (blocks pasted rich markup); some engines
+    // reject the value with a SyntaxError, so fall back to plain "true". We read
+    // textContent regardless, so "true" is equally safe against injection.
+    try { el.contentEditable = "plaintext-only"; } catch (err) {}
+    if (!el.isContentEditable) { try { el.contentEditable = "true"; } catch (err) {} }
+    el.setAttribute("data-willo-editing", "1");
+    el.addEventListener("input", onInlineInput, false);
+    try { el.focus(); } catch (err) {}
+    // Caret at end so the user appends rather than landing at position 0.
+    try {
+      if (window.getSelection && document.createRange) {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        range.collapse(false);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      }
+    } catch (err) {}
+    postInlineInput();  // emit the starting value immediately
+  }
+  function cancelInlineEdit() {
+    if (!inlineEl) return;
+    var el = inlineEl;
+    var orig = inlineOrig;
+    teardownInline();
+    // Restore via textContent (never innerHTML) so restore can't inject DOM.
+    if (orig != null) { try { el.textContent = orig; } catch (err) {} }
+    inlineEl = null;
+    inlineOrig = null;
+  }
+  function finishInlineEdit() {
+    if (!inlineEl) return;
+    // Keep the edited text as the optimistic preview; just stop editing.
+    teardownInline();
+    inlineEl = null;
+    inlineOrig = null;
+  }
+
+  // --- Bulk text editing (v7) ----------------------------------------------
+  // Make EVERY text-leaf element on the page editable at once. The user edits in
+  // many places; we report the whole dirty set up on each change so the dashboard
+  // can show a count + Save all in one commit. textContent-only throughout.
+  function collectTextLeaves() {
+    // Walk every element under <body> via a TreeWalker (no wildcard selector,
+    // so the bridge stays free of the star literal the never-broadcast audit
+    // guards on) and keep the text leaves.
+    var out = [];
+    if (!document.body || !document.createTreeWalker) return out;
+    var walker = document.createTreeWalker(document.body, 1 /* SHOW_ELEMENT */, null);
+    var el = walker.currentNode;
+    while (el) {
+      if (el.nodeType === 1 && isTextLeaf(el)) {
+        // Skip our own single-edit chrome (an in-progress inline edit).
+        if (!(el.isContentEditable && el.getAttribute("data-willo-editing"))) {
+          out.push(el);
+        }
+      }
+      el = walker.nextNode();
+    }
+    return out;
+  }
+  function makeBulkEditable(el) {
+    try { el.contentEditable = "plaintext-only"; } catch (err) {}
+    if (!el.isContentEditable) { try { el.contentEditable = "true"; } catch (err) {} }
+    el.setAttribute("data-willo-bulk", "1");
+    el.style.setProperty("outline", BULK_OUTLINE.neutral, "important");
+    el.style.setProperty("outline-offset", "1px", "important");
+    el.addEventListener("input", onBulkInput, false);
+  }
+  function teardownBulkEl(rec) {
+    var el = rec.el;
+    try { el.removeEventListener("input", onBulkInput, false); } catch (err) {}
+    try { el.contentEditable = "false"; } catch (err) {}
+    try { el.removeAttribute("data-willo-bulk"); } catch (err) {}
+    try { el.style.removeProperty("outline"); } catch (err) {}
+    try { el.style.removeProperty("outline-offset"); } catch (err) {}
+    // Restore any original title we may have swapped for a failure reason.
+    try {
+      if (rec.title0 == null) el.removeAttribute("title");
+      else el.setAttribute("title", rec.title0);
+    } catch (err) {}
+  }
+  // Current visual state of one bulk leaf, and paint its box to match. Any change
+  // from the (rebased) baseline is dirty/amber — or red if it's a standing
+  // failure whose text hasn't been touched since; an unchanged leaf is green if a
+  // Save landed it, else neutral. So re-editing a green (saved) box flips it back
+  // to amber and it becomes savable again.
+  function bulkStateOf(rec) {
+    var cur = fullTextOf(rec.el);
+    if (cur !== rec.orig) {
+      var fail = bulkFailed[rec.selector];
+      if (fail && cur === fail.text) return "failed";
+      return "dirty";
+    }
+    if (bulkSaved[rec.selector]) return "saved";
+    return "neutral";
+  }
+  function paintBulkEl(rec) {
+    if (!rec.el || !rec.el.style) return;
+    var st = bulkStateOf(rec);
+    if (st !== "failed" && bulkFailed[rec.selector]) delete bulkFailed[rec.selector];
+    try { rec.el.style.setProperty("outline", BULK_OUTLINE[st], "important"); } catch (err) {}
+    try {
+      if (st === "failed") {
+        rec.el.setAttribute("title", bulkFailed[rec.selector].reason);
+      } else if (rec.title0 == null) {
+        rec.el.removeAttribute("title");
+      } else {
+        rec.el.setAttribute("title", rec.title0);
+      }
+    } catch (err) {}
+  }
+  function paintAllBulk() {
+    for (var i = 0; i < bulkEls.length; i++) {
+      if (bulkEls[i].el && bulkEls[i].el.isConnected) paintBulkEl(bulkEls[i]);
+    }
+  }
+  // The current dirty set: leaves whose text differs from their (rebased)
+  // baseline. A partial Save rebases the landed selectors' baseline to the saved
+  // text, so they drop out here until the user edits them again. Reports the RAW
+  // baseline + current text so the server matches the exact same fullText the
+  // single-edit path uses.
+  function bulkDirtyItems() {
+    var items = [];
+    var page = location.pathname || "/";
+    for (var i = 0; i < bulkEls.length; i++) {
+      var rec = bulkEls[i];
+      if (!rec.el || !rec.el.isConnected) continue;
+      var cur = fullTextOf(rec.el);
+      if (cur === rec.orig) continue;
+      items.push({ selector: rec.selector, tag: rec.tag, page: page, oldText: rec.orig, newText: cur, sourceFile: rec.sourceFile, sourceLoc: rec.sourceLoc, surrounding: rec.surrounding });
+    }
+    return items;
+  }
+  function postBulkDirty() {
+    if (!bulkOn || !trustedOrigin) return;
+    // Repaint every leaf so edited (amber) / saved (green) / failed (red) /
+    // untouched (indigo) boxes stay in sync as the user types anywhere.
+    paintAllBulk();
+    try { window.parent.postMessage({ type: "willo:bulk-edit-dirty", v: PROTO, items: bulkDirtyItems() }, trustedOrigin); } catch (err) {}
+  }
+  function onBulkInput() {
+    if (bulkRaf) return;
+    if (window.requestAnimationFrame) {
+      bulkRaf = window.requestAnimationFrame(function () { bulkRaf = 0; postBulkDirty(); });
+    } else {
+      postBulkDirty();
+    }
+  }
+  // While bulk-editing, a click on a link/button must place the caret, never
+  // navigate; a form submit must be suppressed too. Both are captured at the
+  // document level so tenant handlers can't beat us to it.
+  function onBulkClickCapture(e) {
+    if (!bulkOn) return;
+    var t = e.target;
+    var editableAncestor = t && t.closest ? t.closest('[data-willo-bulk]') : null;
+    if (editableAncestor) { e.preventDefault(); e.stopPropagation(); return; }
+    // Clicks on a link/button OUTSIDE an editable leaf: still suppress nav so a
+    // stray click can't yank the user off the page mid-edit.
+    var navAncestor = t && t.closest ? t.closest("a[href], button") : null;
+    if (navAncestor) { e.preventDefault(); e.stopPropagation(); }
+  }
+  function onBulkSubmitCapture(e) {
+    if (!bulkOn) return;
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  function enableBulkEdit(origin) {
+    trustedOrigin = origin;
+    if (bulkOn) return;
+    // Bulk and single-select are mutually exclusive editors — leave any single
+    // inline edit sane before taking over the whole page.
+    if (editing) disable();
+    bulkOn = true;
+    bulkSaved = {};
+    bulkFailed = {};
+    bulkEls = [];
+    var leaves = collectTextLeaves();
+    for (var i = 0; i < leaves.length; i++) {
+      var el = leaves[i];
+      var _src = astroSourceOf(el);
+      var rec = { el: el, selector: selectorFor(el), tag: (el.tagName || "").toLowerCase(), orig: fullTextOf(el), title0: el.getAttribute("title"), sourceFile: _src.file, sourceLoc: _src.loc, surrounding: surroundingContext(el) };
+      bulkEls.push(rec);
+      makeBulkEditable(el);
+    }
+    document.addEventListener("click", onBulkClickCapture, true);
+    document.addEventListener("submit", onBulkSubmitCapture, true);
+    for (var j = 0; j < ALLOWED.length; j++) {
+      try { window.parent.postMessage({ type: "willo:bulk-edit-ready", v: PROTO, count: bulkEls.length }, ALLOWED[j]); } catch (err) {}
+    }
+    postBulkDirty();
+  }
+  function disableBulkEdit(restore) {
+    if (!bulkOn) { return; }
+    bulkOn = false;
+    document.removeEventListener("click", onBulkClickCapture, true);
+    document.removeEventListener("submit", onBulkSubmitCapture, true);
+    if (bulkRaf && window.cancelAnimationFrame) { try { window.cancelAnimationFrame(bulkRaf); } catch (err) {} }
+    bulkRaf = 0;
+    for (var i = 0; i < bulkEls.length; i++) {
+      var rec = bulkEls[i];
+      if (!rec.el) continue;
+      // restore=true (Cancel/Escape) reverts every leaf to its baseline;
+      // restore=false (Save succeeded for all) keeps the edited text as the
+      // optimistic preview. rec.orig is rebased to the saved text for any
+      // partially-saved leaf, so a revert keeps saved edits and only drops
+      // still-unsaved ones.
+      if (restore && rec.el.isConnected) {
+        try { rec.el.textContent = rec.orig; } catch (err) {}
+      }
+      teardownBulkEl(rec);
+    }
+    bulkEls = [];
+    bulkSaved = {};
+    bulkFailed = {};
+  }
+  // A partial Save landed some edits; drop those selectors from the dirty
+  // baseline (rebase their orig to the just-saved text) so they stop reporting
+  // as dirty while the still-failed ones remain editable + highlighted.
+  function clearBulkDirty(selectors) {
+    if (!bulkOn || !selectors || !selectors.length) return;
+    var set = {};
+    for (var i = 0; i < selectors.length; i++) set[selectors[i]] = true;
+    for (var j = 0; j < bulkEls.length; j++) {
+      var rec = bulkEls[j];
+      if (!set[rec.selector]) continue;
+      // Rebase original to current so it's no longer dirty; mark it saved so it
+      // paints green (and can never be re-flagged as a failure) and leave it
+      // editable in case the user wants to tweak it further.
+      if (rec.el && rec.el.isConnected) rec.orig = fullTextOf(rec.el);
+      bulkSaved[rec.selector] = true;
+      delete bulkFailed[rec.selector];
+      paintBulkEl(rec);
+    }
+    postBulkDirty();
+  }
+  // A Save couldn't land these selectors — paint them red + show the reason on
+  // hover. Records the exact failed text so the annotation self-clears the moment
+  // the user re-edits the element (paintBulkEl drops it once the text changes).
+  function markBulkFailed(items) {
+    if (!bulkOn || !items || !items.length) return;
+    var bysel = {};
+    for (var i = 0; i < items.length; i++) {
+      if (items[i] && items[i].selector) bysel[items[i].selector] = items[i].reason || "";
+    }
+    for (var j = 0; j < bulkEls.length; j++) {
+      var rec = bulkEls[j];
+      if (!(rec.selector in bysel)) continue;
+      if (bulkSaved[rec.selector]) continue;
+      if (!rec.el || !rec.el.isConnected) continue;
+      bulkFailed[rec.selector] = { reason: bysel[rec.selector], text: fullTextOf(rec.el) };
+      paintBulkEl(rec);
+    }
+  }
+
+  // --- Live navigation (Phase B) -------------------------------------------
+  // We can't read the browser's forward-history availability directly, so we
+  // track a session-local index. It resets to 0 on each full page load (fresh
+  // document), so canGoBack also considers history.length (there may be prior
+  // entries from before this document). pushState is patched to stamp the index
+  // into the history state; popstate reads it back to recover position. Best
+  // effort by design — a preview toolbar, not a router.
+  var idx = 0;
+  var maxIdx = 0;
+  function stamp(state) {
+    var s = (state && typeof state === "object") ? state : {};
+    try { s.__willoIdx = idx; } catch (err) {}
+    return s;
+  }
+  try {
+    var _push = history.pushState;
+    history.pushState = function (state) {
+      idx += 1; maxIdx = idx;
+      var args = Array.prototype.slice.call(arguments);
+      args[0] = stamp(state);
+      var r = _push.apply(this, args);
+      reportNav();
+      return r;
+    };
+    var _replace = history.replaceState;
+    history.replaceState = function (state) {
+      var args = Array.prototype.slice.call(arguments);
+      args[0] = stamp(state);
+      var r = _replace.apply(this, args);
+      reportNav();
+      return r;
+    };
+  } catch (err) {}
+  window.addEventListener("popstate", function (e) {
+    var st = e && e.state;
+    if (st && typeof st.__willoIdx === "number") idx = st.__willoIdx;
+    else idx = Math.max(0, idx - 1);
+    reportNav();
+  });
+  function navState() {
+    return {
+      url: location.href,
+      path: location.pathname + location.search + location.hash,
+      canGoBack: idx > 0 || history.length > 1,
+      canGoForward: idx < maxIdx
+    };
+  }
+  function reportNav() {
+    var s = navState();
+    for (var i = 0; i < ALLOWED.length; i++) {
+      try {
+        window.parent.postMessage(
+          { type: "willo:navigated", v: PROTO, url: s.url, path: s.path, canGoBack: s.canGoBack, canGoForward: s.canGoForward },
+          ALLOWED[i]
+        );
+      } catch (err) {}
+    }
+  }
+  function reportUnload() {
+    for (var i = 0; i < ALLOWED.length; i++) {
+      try { window.parent.postMessage({ type: "willo:unload", v: PROTO }, ALLOWED[i]); } catch (err) {}
+    }
+  }
+  window.addEventListener("pagehide", reportUnload);
+
+  // --- Live token preview (Phase A follow-up A-ii) -------------------------
+  // The dashboard Brand drawer previews a rebrand in THIS live page by setting
+  // the semantic CSS vars on :root — no rebuild, no deploy. We only touch
+  // custom properties whose name and value pass strict patterns, so a
+  // malicious/buggy value can never break out of the declaration and inject a
+  // rule via var() substitution (CSS-var injection defence-in-depth, even
+  // though the sender origin is already allowlisted).
+  var previewedVars = [];
+  var previewDarkPrev = null;
+  var TOKEN_NAME_RE = /^--[a-z0-9-]{1,40}$/;
+  // \x25 is the percent sign, written as a hex escape so the bridge body stays
+  // free of a literal percent char (it's concatenated into a formatted
+  // template). Allows the percentage forms in oklch()/hsl()/rgb() colours.
+  // The quote chars are allowed too so QUOTED font-family stacks pass — the
+  // dashboard sends --font-display/--font-body as e.g. `"Playfair Display",
+  // serif` (fontStack quotes multi-word families), and without the quote a
+  // multi-word font would be rejected and never preview. Quotes can't break out
+  // of the declaration: `;`, `{`, `}`, `:`, `<`, `>` and backslash stay excluded
+  // (so no extra declaration/rule can be injected) and url()/expression()/
+  // image-set() are still substring-denied below.
+  var TOKEN_VAL_RE = /^[a-zA-Z0-9 ()\x25.,\/#_'"-]{1,120}$/;
+  function applyPreviewTokens(tokens, dark) {
+    if (!tokens || typeof tokens !== "object") return;
+    var root = document.documentElement;
+    for (var k in tokens) {
+      if (!Object.prototype.hasOwnProperty.call(tokens, k)) continue;
+      if (!TOKEN_NAME_RE.test(k)) continue;
+      var val = String(tokens[k]);
+      if (!TOKEN_VAL_RE.test(val)) continue;
+      // Reject resource-fetching / legacy-exec CSS functions even though the
+      // sender origin is allowlisted (defence-in-depth: a token is a colour /
+      // length / font-stack, never a url()). Mirrors the backend colour guard.
+      var low = val.toLowerCase();
+      if (low.indexOf("url(") !== -1 || low.indexOf("expression(") !== -1 || low.indexOf("image-set(") !== -1) continue;
+      root.style.setProperty(k, val);
+      if (previewedVars.indexOf(k) === -1) previewedVars.push(k);
+    }
+    if (typeof dark === "boolean") {
+      if (previewDarkPrev === null) previewDarkPrev = root.classList.contains("dark");
+      if (dark) root.classList.add("dark"); else root.classList.remove("dark");
+    }
+  }
+  function resetPreviewTokens() {
+    var root = document.documentElement;
+    for (var i = 0; i < previewedVars.length; i++) root.style.removeProperty(previewedVars[i]);
+    previewedVars = [];
+    if (previewDarkPrev !== null) {
+      if (previewDarkPrev) root.classList.add("dark"); else root.classList.remove("dark");
+      previewDarkPrev = null;
+    }
+  }
+
+  // --- Live FONT preview (v6) ----------------------------------------------
+  // The token vars above can flip --font-display/--font-body to a family the
+  // page never loaded, so the browser falls back to the system stack. The
+  // dashboard can't inject a stylesheet into this cross-origin iframe — only the
+  // bridge can — so a preview-tokens push may carry `fontHref`, a Google Fonts
+  // css2 URL we load into a single dedup'd <link>. Validated STRICTLY: it must
+  // be an https://fonts.googleapis.com/css2? URL and match an ascii charset with
+  // NO parens/quotes/spaces, so a url()/expression()/javascript: value or any
+  // other origin can never reach the DOM (defence-in-depth even though the
+  // sender origin is allowlisted — mirrors the token-value guard above).
+  var FONT_LINK_ID = "willo-preview-font";
+  // \x25 is the percent sign as a hex escape (the bridge body stays free of a
+  // literal percent char — it is concatenated into a formatted template), kept
+  // in the charset so percent-encoded family names (rare) survive validation.
+  var FONT_HREF_RE = /^https:\/\/fonts\.googleapis\.com\/css2\?[A-Za-z0-9=&:;@._+\x25-]{1,1900}$/;
+  function validFontHref(href) {
+    if (typeof href !== "string" || href.length > 2000) return null;
+    if (!FONT_HREF_RE.test(href)) return null;
+    // Re-check origin/path via the URL parser (belt-and-suspenders: the regex
+    // already pins the prefix, but this rejects any parser-level surprise).
+    try {
+      var u = new URL(href);
+      if (u.protocol !== "https:" || u.host !== "fonts.googleapis.com" || u.pathname !== "/css2") return null;
+    } catch (err) { return null; }
+    return href;
+  }
+  function applyPreviewFont(href) {
+    var valid = validFontHref(href);
+    if (!valid) return;  // absent/invalid href: leave any existing link as-is (removal is reset-only)
+    var existing = document.getElementById(FONT_LINK_ID);
+    if (existing) {
+      if (existing.getAttribute("href") !== valid) existing.setAttribute("href", valid);
+      return;
+    }
+    var head = document.head || document.getElementsByTagName("head")[0];
+    if (!head) return;
+    var link = document.createElement("link");
+    link.id = FONT_LINK_ID;
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("href", valid);
+    head.appendChild(link);
+  }
+  function removePreviewFont() {
+    var existing = document.getElementById(FONT_LINK_ID);
+    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+  }
+
+  window.addEventListener("message", function (e) {
+    if (ALLOWED.indexOf(e.origin) === -1) return;
+    var d = e.data;
+    if (!d || typeof d !== "object" || d.v !== PROTO) return;
+    if (d.type === "willo:enable-edit") enable(e.origin);
+    else if (d.type === "willo:disable-edit") disable();
+    else if (d.type === "willo:clear-selection") { cancelInlineEdit(); clearSelected(); }
+    else if (d.type === "willo:start-inline-edit") startInlineEdit();
+    else if (d.type === "willo:cancel-inline-edit") cancelInlineEdit();
+    else if (d.type === "willo:finish-inline-edit") finishInlineEdit();
+    else if (d.type === "willo:enable-bulk-edit") enableBulkEdit(e.origin);
+    else if (d.type === "willo:disable-bulk-edit") disableBulkEdit(d.restore !== false);
+    else if (d.type === "willo:clear-bulk-dirty") clearBulkDirty(d.selectors);
+    else if (d.type === "willo:mark-bulk-failed") markBulkFailed(d.items);
+    else if (d.type === "willo:preview-tokens") {
+      // Inject the font link FIRST so the stylesheet starts loading before the
+      // --font-display/--font-body vars flip — the family renders as early as
+      // possible (a brief fallback flash can still occur while the webfont
+      // downloads, but the link is in the DOM before the var switch).
+      applyPreviewFont(d.fontHref);
+      applyPreviewTokens(d.tokens, d.dark);
+    }
+    else if (d.type === "willo:reset-tokens") { resetPreviewTokens(); removePreviewFont(); }
+    else if (d.type === "willo:scroll-to-selected") {
+      if (selected && selected.scrollIntoView) {
+        try { selected.scrollIntoView({ behavior: "smooth", block: "center" }); } catch (err) { selected.scrollIntoView(); }
+      }
+    }
+    else if (d.type === "willo:back") { try { history.back(); } catch (err) {} }
+    else if (d.type === "willo:forward") { try { history.forward(); } catch (err) {} }
+    else if (d.type === "willo:reload") { try { location.reload(); } catch (err) {} }
+    else if (d.type === "willo:navigate") {
+      // Same-origin only — the bridge must never be a redirector to arbitrary
+      // sites even for an allowlisted parent.
+      try {
+        var u = new URL(String(d.path || "/"), location.href);
+        if (u.origin === location.origin) location.assign(u.href);
+      } catch (err) {}
+    }
+  });
+
+  function announceReady() {
+    for (var i = 0; i < ALLOWED.length; i++) {
+      try { window.parent.postMessage({ type: "willo:ready", v: PROTO, nav: true, inlineEdit: true, bulkEdit: true }, ALLOWED[i]); } catch (err) {}
+    }
+    reportNav();
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", announceReady);
+  } else {
+    announceReady();
+  }
+})();
+    </script> <!-- WILLO-BRIDGE:END --> </body></html>

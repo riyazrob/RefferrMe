@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="dashboard-body">
+  <aside class="sidebar">
+    <div class="logo">Reffery</div>
+    <nav>
+      <a href="#" class="active" data-panel="overview">Overview</a>
+      <a href="#" data-panel="profile">Profile</a>
+      <a href="#" data-panel="referrals">Find Referrals</a>
+      <a href="#" data-panel="my-requests">My Requests</a>
+      <a href="#" data-panel="referrer">Referrer</a>
+      <a href="#" data-panel="incoming">Incoming Requests</a>
+      <a href="#" data-panel="notifications">Notifications</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div id="user-info"></div>
+      <button class="btn secondary full" onclick="logout()">Logout</button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section id="panel-overview" class="panel active">
+      <h1>Welcome back</h1>
+      <div class="stats-grid" id="stats-grid"></div>
+      <div class="card">
+        <h3>Quick Actions</h3>
+        <div class="action-row">
+          <button class="btn primary" onclick="switchPanel('profile')">Complete Profile</button>
+          <button class="btn secondary" onclick="analyzeProfile()">Run AI Analysis</button>
+          <button class="btn secondary" onclick="becomeReferrer()">Become a Referrer</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="panel-profile" class="panel">
+      <h1>Your Profile</h1>
+      <form id="profile-form" onsubmit="saveProfile(event)">
+        <textarea id="resume_text" placeholder="Resume text" rows="4"></textarea>
+        <input id="linkedin_url" placeholder="LinkedIn URL">
+        <textarea id="skills" placeholder="Skills (comma-separated)" rows="2"></textarea>
+        <textarea id="experience" placeholder="Experience" rows="3"></textarea>
+        <textarea id="education" placeholder="Education" rows="2"></textarea>
+        <input id="github_url" placeholder="GitHub URL">
+        <input id="portfolio_url" placeholder="Portfolio URL">
+        <input id="work_authorization" placeholder="Work authorization">
+        <input id="preferred_locations" placeholder="Preferred locations">
+        <button type="submit" class="btn primary">Save Profile</button>
+      </form>
+      <div id="ai-analysis" class="card hidden"></div>
+    </section>
+
+    <section id="panel-referrals" class="panel">
+      <h1>Find Referrals</h1>
+      <div class="search-bar">
+        <input id="search-company" placeholder="Company">
+        <input id="search-role" placeholder="Role">
+        <input id="search-tech" placeholder="Technology">
+        <button class="btn primary" onclick="searchReferrals()">Search</button>
+      </div>
+      <div id="referral-list" class="list"></div>
+    </section>
+
+    <section id="panel-my-requests" class="panel">
+      <h1>My Referral Requests</h1>
+      <div id="my-requests-list" class="list"></div>
+    </section>
+
+    <section id="panel-referrer" class="panel">
+      <h1>Referrer Dashboard</h1>
+      <form id="referral-form" onsubmit="createReferral(event)">
+        <input id="ref-company" placeholder="Company" required>
+        <input id="ref-title" placeholder="Job title" required>
+        <input id="ref-link" placeholder="Job link">
+        <input id="ref-job-id" placeholder="Job ID">
+        <textarea id="ref-description" placeholder="Paste job description" rows="6" required></textarea>
+        <input id="ref-slots" type="number" placeholder="Referral slots" value="1" min="1">
+        <button type="submit" class="btn primary">Create Referral</button>
+      </form>
+      <div id="my-referrals-list" class="list"></div>
+    </section>
+
+    <section id="panel-incoming" class="panel">
+      <h1>Incoming Requests</h1>
+      <div id="incoming-list" class="list"></div>
+    </section>
+
+    <section id="panel-notifications" class="panel">
+      <h1>Notifications</h1>
+      <div id="notifications-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>
